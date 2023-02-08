@@ -1,0 +1,288 @@
+@startuml
+
+title __SAMPLE's Class Diagram__\n
+
+
+    namespace ample {
+      class sample.DataController {
+          + xaxis : CategoryAxis
+          + yaxis : NumberAxis
+          ~ numvsratio : double[][]
+          ~ procpane : Pane
+          ~ ratioarr : double[]
+          ~ theme : String
+          - ProcChart : LineChart<?, ?>
+          - dataLayout : AnchorPane
+          - databpane : BorderPane
+          - databutton : Button
+          - datarootLayout : AnchorPane
+          - otherbutton : Button
+          - proccircle : Circle
+          - procindex : Label
+          - proctext : Label
+          - schoolbutton : Button
+          - tasksbutton : Button
+          - timerbutton : Button
+          - title : Label
+  + changescreenData()
+  + changescreenTask()
+  + changescreenTaskOth()
+  + changescreenTimer()
+  {static} + fillarray()
+  + initialize()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.DateDueSorter {
+          + compare()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.Main {
+          {static} + main()
+          + start()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.SampleController {
+~ newtaskbutton : Button
+~ tasklist : ArrayList<TaskStructure>
+- databutton : Button
+- innerborderpane : BorderPane
+- otherbutton : Button
+- rootLayout : AnchorPane
+- schoolbutton : Button
+- tasksbutton : Button
+- theme : String
+- timerbutton : Button
+- todaybox : VBox
+- upcombox : VBox
++ additem()
++ addtasktocompleted()
++ changescreenData()
++ changescreenTask()
++ changescreenTaskOth()
++ changescreenTimer()
++ changescreennewTask()
++ findtask()
++ initialize()
++ removeTask()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.SampleOthController {
+          ~ newtaskbutton : Button
+          ~ tasklistoth : ArrayList<TaskStructure>
+          - databutton : Button
+          - innerborderpane : BorderPane
+          - otherbutton : Button
+          - rootLayout : AnchorPane
+          - schoolbutton : Button
+          - tasksbutton : Button
+          - theme : String
+          - timerbutton : Button
+          - todaybox : VBox
+          - upcombox : VBox
+          + additem()
+          + addtasktocompleted()
+          + changescreenData()
+          + changescreenTask()
+          + changescreenTaskOth()
+          + changescreenTimer()
+          + changescreennewTask()
+          + findtask()
+          + initialize()
+          {static} + removeTask()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.TaskEntryController {
+~ bgimage : ImageView
+~ filepath : String
+~ filepath2 : String
+~ tasklist : ArrayList<TaskStructure>
+~ theme : String
+- datepicker : DatePicker
+- otherbutton : Button
+- rootLayout : AnchorPane
+- schoolbutton : Button
+- subjectfield : ChoiceBox
+- tasknamefield : TextField
+- title : Label
++ addnewtask()
++ changescreenData()
++ changescreenTask()
++ changescreenTaskOth()
++ changescreenTimer()
++ initialize()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.TaskEntryOthController {
+          ~ bgimage : ImageView
+          ~ filepath : String
+          ~ filepath2 : String
+          ~ tasklistoth : ArrayList<TaskStructure>
+          ~ theme : String
+          - datepicker : DatePicker
+          - otherbutton : Button
+          - rootLayout : AnchorPane
+          - schoolbutton : Button
+          - subjectfield : ChoiceBox
+          - tasknamefield : TextField
+          - title : Label
+          + addnewtask()
+          + changescreenData()
+          + changescreenTask()
+          + changescreenTaskOth()
+          + changescreenTimer()
+          + initialize()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.TaskObjectController {
+~ lblTaskName : Label
+~ lblduedate : Label
+~ taskindicator : Button
+~ taskpane : BorderPane
+~ view : BorderPane
++ getPage()
++ setTask()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.TaskStructure {
+~ completed : Boolean
+~ datecompleted : LocalDate
+~ datedue : LocalDate
+~ dateset : LocalDate
+~ name : String
+~ subject : String
++ TaskStructure()
++ getCompleted()
++ getDatecompleted()
++ getDatedue()
++ getDateset()
++ getName()
++ getSubject()
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.TimerController {
+~ minutes : int
+~ seconds : int
+~ theme : String
+~ x : int
+~ y : int
+- circletimer : Circle
+- colonlabel : Label
+- databutton : Button
+- minTfield : TextField
+- minTlabel : Label
+- minUfield : TextField
+- minUlabel : Label
+- minbox : HBox
+- minfieldbox : HBox
+- otherbutton : Button
+- pausebutton : Button
+- playbutton : Button
+- schoolbutton : Button
+- secTfield : TextField
+- secTlabel : Label
+- secUfield : TextField
+- secUlabel : Label
+- secbox : HBox
+- secfieldbox : HBox
+- stopbutton : Button
+- tasksbutton : Button
+- timerLayout : AnchorPane
+- timerRootlayout : AnchorPane
+- timerbpane : BorderPane
+- timerbutton : Button
++ changescreenData()
++ changescreenTask()
++ changescreenTaskOth()
++ changescreenTimer()
++ errormessage()
++ initialize()
++ playsound()
++ starttimer()`
+      }
+    }
+
+  
+
+
+    namespace ample {
+      class sample.WelcomeController {
++ taskbutton : Button
++ timerbutton : Button
+~ bgimage : ImageView
+- databutton : Button
+- rootLayout : AnchorPane
+- theme : String
+- themeblue : Button
+- themegreen : Button
+- themepink : Button
+- themered : Button
++ changeThemeBlue()
++ changeThemeGreen()
++ changeThemePink()
++ changeThemeRed()
++ changescreenData()
++ changescreenTask()
++ changescreenTimer()
++ initialize()
+      }
+    }
+
+  
+
+  sample.DateDueSorter .up.|> java.util.Comparator
+  sample.Main -up-|> javafx.application.Application
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

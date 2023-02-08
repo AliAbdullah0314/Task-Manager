@@ -1,0 +1,64 @@
+.anchorpane{
+-fx-background-color: #f8f8f8;
+}
+.scrollpane{
+-fx-border-color: #2ad5ad;
+-fx-background-color: #2ad5ad;
+}
+.borderpane{
+-fx-border-color: #2ad5ad;
+}
+.button{
+-fx-background-color: #d3d3d3;
+-fx-background-radius: 10;
+-fx-text-fill: #181818;
+}
+.vboxtasks{
+-fx-background-color: #e8e8e8;
+}
+.titletext{
+-fx-text-fill: #181818;
+}
+.circletimer{
+-fx-stroke:#2ad5ad;
+}
+.timerlabels{
+-fx-text-fill: #181818;
+}
+.timerbuttons{
+-fx-background-color: #e8e8e8;
+-fx-border-color: #000000;
+-fx-border-radius: 2000;
+-fx-background-radius: 2000
+}
+.taskbpane{
+-fx-background-radius: 50;
+-fx-border-radius: 50;
+-fx-background-color: #d3d3d3;
+}
+.lbltaskname{
+-fx-text-fill: #383838;
+}
+.lblduedate{
+-fx-text-fill: #383838;
+-fx-border-color: grey;
+-fx-background-radius: 200;
+-fx-border-radius: 200;
+}
+.taskindicator{
+-fx-background-radius: 100;
+-fx-padding: 0;
+-fx-background-color: #e8e8e8;
+-fx-border-color: grey;
+-fx-border-radius: 100;
+}
+.proccircle{
+ -fx-fill:#2ad5ad;
+ }
+.proctext{
+ -fx-text-fill: #e5e5e5;
+ }
+.timerbpane{
+-fx-background-color: #f8f8f8;
+
+}

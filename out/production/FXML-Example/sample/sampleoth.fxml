@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1440.0" styleClass="anchorpane" stylesheets="@Red.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SampleOthController">
+   <children>
+      <HBox layoutX="175.0" layoutY="-14.0" prefHeight="45.0" prefWidth="555.0" spacing="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="tasksbutton" mnemonicParsing="false" onAction="#changescreenTaskOth" prefHeight="45.0" prefWidth="400.0" text="TASKS" textFill="#e5e5e5">
+               <font>
+                  <Font name="Gill Sans" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="timerbutton" mnemonicParsing="false" onAction="#changescreenTimer" prefHeight="45.0" prefWidth="400.0" text="TIMER" textFill="#e5e5e5">
+               <font>
+                  <Font name="Gill Sans" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="databutton" mnemonicParsing="false" onAction="#changescreenData" prefHeight="45.0" prefWidth="400.0" text="DATA" textFill="#e5e5e5">
+               <font>
+                  <Font name="Gill Sans" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="45.0" prefWidth="555.0" rotate="90.0" spacing="100.0" translateX="935.0" translateY="400.0" AnchorPane.rightAnchor="681.0">
+         <children>
+            <Button fx:id="schoolbutton" mnemonicParsing="false" onAction="#changescreenTask" prefHeight="45.0" prefWidth="400.0" text="SCHOOL" textFill="#e5e5e5">
+               <font>
+                  <Font name="Gill Sans" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="otherbutton" mnemonicParsing="false" onAction="#changescreenTaskOth" prefHeight="45.0" prefWidth="400.0" text="OTHER" textFill="#e5e5e5">
+               <font>
+                  <Font name="Gill Sans" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="44.0" prefHeight="805.0" prefWidth="1385.0">
+         <children>
+            <BorderPane fx:id="innerborderpane" prefHeight="856.0" prefWidth="1391.0" AnchorPane.bottomAnchor="-51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <BorderPane prefHeight="409.0" prefWidth="1384.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <ScrollPane fx:id="scrollpanetop" fitToHeight="true" fitToWidth="true" prefHeight="339.0" prefWidth="1384.0" styleClass="scrollpane" stylesheets="@Red.css" BorderPane.alignment="CENTER">
+                           <content>
+                              <VBox fx:id="todaybox" alignment="TOP_CENTER" prefHeight="363.0" prefWidth="1382.0" styleClass="vboxtasks" stylesheets="@Red.css" />
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </center>
+               <bottom>
+                  <BorderPane prefHeight="374.0" prefWidth="1384.0" style="-fx-background-color: #c32f2a #c32f2a;" BorderPane.alignment="CENTER">
+                     <center>
+                        <ScrollPane prefHeight="442.0" prefWidth="1384.0" styleClass="scrollpane" stylesheets="@Red.css" BorderPane.alignment="CENTER">
+                           <content>
+                              <VBox fx:id="upcombox" prefHeight="372.0" prefWidth="1380.0" styleClass="vboxtasks" stylesheets="@Red.css" />
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </bottom>
+               <top>
+                  <BorderPane prefHeight="66.0" prefWidth="1384.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <BorderPane prefHeight="12.0" prefWidth="1384.0" styleClass="borderpane" stylesheets="@Red.css" BorderPane.alignment="CENTER">
+                           <center>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="342.0" styleClass="titletext" stylesheets="@Red.css" text="TASKS" textFill="#e5e5e5" translateX="30.0" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Gill Sans" size="50.0" />
+                                 </font>
+                              </Label>
+                           </center>
+                           <right>
+                              <Button fx:id="newtaskbutton" alignment="CENTER" contentDisplay="RIGHT" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#changescreennewTask" prefHeight="65.0" prefWidth="65.0" style="-fx-background-radius: 50;" BorderPane.alignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </right>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </top>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

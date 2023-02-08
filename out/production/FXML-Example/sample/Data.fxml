@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="datarootLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1430.0" styleClass="anchorpane" stylesheets="@Red.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DataController">
+    <children>
+        <HBox layoutX="175.0" layoutY="-14.0" prefHeight="45.0" prefWidth="555.0" spacing="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="tasksbutton" mnemonicParsing="false" onAction="#changescreenTask" prefHeight="45.0" prefWidth="400.0" style="-fx-background-radius: 10;" text="TASKS" textFill="#e8e8e8">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="timerbutton" mnemonicParsing="false" onAction="#changescreenTimer" prefHeight="45.0" prefWidth="400.0" style="-fx-background-radius: 10;" text="TIMER" textFill="#e8e8e8">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="databutton" mnemonicParsing="false" onAction="#changescreenData" prefHeight="45.0" prefWidth="400.0" style="-fx-background-radius: 10;" text="DATA" textFill="#e8e8e8">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="45.0" prefWidth="555.0" rotate="90.0" spacing="100.0" translateX="935.0" translateY="400.0" AnchorPane.rightAnchor="681.0">
+            <children>
+                <Button fx:id="schoolbutton" mnemonicParsing="false" onAction="#changescreenTask" prefHeight="45.0" prefWidth="400.0" style="-fx-background-radius: 10;" text="SCHOOL" textFill="#e8e8e8">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="otherbutton" mnemonicParsing="false" onAction="#changescreenTaskOth" prefHeight="45.0" prefWidth="400.0" style="-fx-background-radius: 10;" text="OTHER" textFill="#e8e8e8">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <AnchorPane fx:id="dataLayout" layoutY="44.0" prefHeight="805.0" prefWidth="1384.0">
+            <children>
+                <BorderPane fx:id="databpane" prefHeight="805.0" prefWidth="1383.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <center>
+                        <BorderPane prefHeight="409.0" prefWidth="1384.0" BorderPane.alignment="CENTER">
+                     <left>
+                        <LineChart fx:id="ProcChart" legendSide="TOP" legendVisible="false" maxHeight="600.0" maxWidth="1005.0" minHeight="600.0" minWidth="1005.0" prefHeight="600.0" prefWidth="1005.0" style="-fx-background-color: white; -fx-background-radius: 10;" title="Procrastination" BorderPane.alignment="CENTER">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </left>
+                     <right>
+                        <Pane fx:id="procpane" prefHeight="739.0" prefWidth="375.0" stylesheets="@Red.css" BorderPane.alignment="CENTER">
+                           <children>
+                              <Circle fx:id="proccircle" centerX="187.0" layoutX="2.0" layoutY="254.0" radius="175.0" stroke="TRANSPARENT" strokeType="INSIDE" styleClass="proccircle" />
+                              <Label fx:id="proctext" alignment="TOP_CENTER" layoutX="58.0" layoutY="142.0" prefHeight="115.0" prefWidth="276.0" styleClass="proctext" text="Procrastination index :" textAlignment="CENTER" textFill="#e8e8e8" textOverrun="CLIP" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans" size="43.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="procindex" alignment="TOP_CENTER" layoutX="50.0" layoutY="255.0" prefHeight="115.0" prefWidth="276.0" styleClass="proctext" text="34" textAlignment="CENTER" textFill="#e8e8e8" textOverrun="CLIP" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans" size="70.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </right>
+                        </BorderPane>
+                    </center>
+                    <top>
+                        <BorderPane prefHeight="66.0" prefWidth="1384.0" BorderPane.alignment="CENTER">
+                            <center>
+                                <BorderPane prefHeight="12.0" prefWidth="1384.0" style="-fx-border-color: #adadad#adadad;" BorderPane.alignment="CENTER">
+                                    <center>
+                                        <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="342.0" text="DATA" textFill="#e5e5e5" translateX="30.0" BorderPane.alignment="CENTER">
+                                            <font>
+                                                <Font name="Gill Sans" size="50.0" />
+                                            </font>
+                                        </Label>
+                                    </center>
+                                </BorderPane>
+                            </center>
+                        </BorderPane>
+                    </top>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

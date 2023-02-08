@@ -1,0 +1,7 @@
+.date-picker {
+    -fx-font: 45px "Gill Sans";
+}
+
+.date-picker. text-field {
+    -fx-font: 45px "Gill Sans";
+}
