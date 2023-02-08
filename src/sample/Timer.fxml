@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="timerRootlayout" minHeight="900.0" minWidth="1440.0" prefHeight="0.0" prefWidth="0.0" styleClass="anchorpane" stylesheets="@Red.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.TimerController">
+    <children>
+        <HBox layoutX="175.0" layoutY="-14.0" prefHeight="45.0" prefWidth="555.0" spacing="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="tasksbutton" mnemonicParsing="false" onAction="#changescreenTask" prefHeight="45.0" prefWidth="400.0" stylesheets="@Red.css" text="TASKS">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="timerbutton" mnemonicParsing="false" onAction="#changescreenTimer" prefHeight="45.0" prefWidth="400.0" stylesheets="@Red.css" text="TIMER">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="databutton" mnemonicParsing="false" onAction="#changescreenData" prefHeight="45.0" prefWidth="400.0" stylesheets="@Red.css" text="DATA">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox prefHeight="45.0" prefWidth="555.0" rotate="90.0" spacing="100.0" translateX="935.0" translateY="400.0" AnchorPane.rightAnchor="681.0">
+            <children>
+                <Button fx:id="schoolbutton" mnemonicParsing="false" onAction="#changescreenTask" prefHeight="45.0" prefWidth="400.0" stylesheets="@Red.css" text="SCHOOL">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="otherbutton" mnemonicParsing="false" onAction="#changescreenTaskOth" prefHeight="45.0" prefWidth="400.0" stylesheets="@Red.css" text="OTHER">
+                    <font>
+                        <Font name="Gill Sans" size="24.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <AnchorPane fx:id="timerLayout" layoutY="44.0" prefHeight="805.0" prefWidth="1384.0">
+            <children>
+                <BorderPane fx:id="timerbpane" prefHeight="856.0" prefWidth="1394.0" style="-fx-border-color: #adadad;" AnchorPane.bottomAnchor="-51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-10.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <BorderPane prefHeight="66.0" prefWidth="1384.0" BorderPane.alignment="CENTER">
+                            <center>
+                                <BorderPane prefHeight="12.0" prefWidth="1384.0" style="-fx-border-color: #adadad#adadad;" BorderPane.alignment="CENTER">
+                                    <center>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="342.0" styleClass="titletext" stylesheets="@Red.css" text="TIMER" translateX="30.0" BorderPane.alignment="CENTER">
+                                            <font>
+                                                <Font name="Gill Sans" size="50.0" />
+                                            </font>
+                                        </Label>
+                                    </center>
+                                </BorderPane>
+                            </center>
+                        </BorderPane>
+                    </top>
+               <left>
+                  <Circle fx:id="circletimer" fill="#2197ff00" radius="322.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" styleClass="circletimer" translateX="405.0" BorderPane.alignment="CENTER_RIGHT">
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Circle>
+               </left>
+               <center>
+                  <BorderPane prefHeight="665.0" prefWidth="662.0" translateX="-300.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <Label fx:id="colonlabel" styleClass="timerlabels" stylesheets="@Red.css" text=":" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="160.0" />
+                           </font>
+                        </Label>
+                     </center>
+                     <right>
+                        <HBox fx:id="secfieldbox" maxHeight="90.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" translateX="-150.0" translateY="15.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="secTfield" alignment="CENTER" maxHeight="120.0" maxWidth="90.0" minHeight="120.0" minWidth="90.0" style="-fx-padding: 0;">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="secUfield" alignment="CENTER" maxHeight="120.0" maxWidth="90.0" minHeight="120.0" minWidth="90.0" style="-fx-padding: 0;">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </right>
+                     <left>
+                        <HBox fx:id="minfieldbox" maxHeight="90.0" maxWidth="180.0" minHeight="120.0" prefHeight="100.0" prefWidth="200.0" translateX="150.0" translateY="15.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="minTfield" alignment="CENTER" maxHeight="120.0" maxWidth="90.0" minHeight="120.0" minWidth="90.0" prefHeight="120.0" prefWidth="90.0" style="-fx-padding: 0;">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="minUfield" alignment="CENTER" maxHeight="120.0" maxWidth="90.0" minHeight="120.0" minWidth="90.0" style="-fx-padding: 0;">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </left>
+                     <top>
+                        <HBox fx:id="minbox" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" prefHeight="120.0" prefWidth="200.0" translateX="-125.0" translateY="350.0" visible="false" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="minTlabel" alignment="CENTER" contentDisplay="CENTER" minHeight="120.0" minWidth="90.0" styleClass="timerlabels" stylesheets="@Red.css" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="minUlabel" alignment="CENTER" contentDisplay="CENTER" minHeight="120.0" minWidth="90.0" styleClass="timerlabels" stylesheets="@Red.css" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </top>
+                     <bottom>
+                        <HBox fx:id="secbox" maxHeight="120.0" maxWidth="200.0" minHeight="120.0" minWidth="200.0" prefHeight="100.0" prefWidth="200.0" translateX="125.0" translateY="-320.0" visible="false" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="secTlabel" alignment="CENTER" contentDisplay="CENTER" minHeight="120.0" minWidth="90.0" styleClass="timerlabels" stylesheets="@Red.css" text="0">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="secUlabel" alignment="CENTER" contentDisplay="CENTER" minHeight="120.0" minWidth="90.0" styleClass="timerlabels" stylesheets="@Red.css" text="0">
+                                 <font>
+                                    <Font name="Gill Sans" size="96.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </center>
+                </BorderPane>
+            <Pane layoutX="620.0" layoutY="583.0">
+               <children>
+                  <Button fx:id="playbutton" layoutX="30.0" mnemonicParsing="false" onAction="#starttimer" prefHeight="85.0" prefWidth="71.0" style="-fx-background-color: #e8e8e8; -fx-border-color: #000000; -fx-border-radius: 2000; -fx-background-radius: 2000;" styleClass="timerbuttons" stylesheets="@Red.css">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
+                           <image>
+                              <Image url="@playbutton.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="510.0" layoutY="583.0">
+               <children>
+                  <Button fx:id="pausebutton" layoutX="10.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="71.0" styleClass="timerbuttons" stylesheets="@Red.css" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@pause.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="780.0" layoutY="583.0" prefWidth="148.0">
+               <children>
+                  <Button fx:id="stopbutton" mnemonicParsing="false" prefHeight="85.0" prefWidth="71.0" styleClass="timerbuttons" stylesheets="@Red.css" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@stop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
